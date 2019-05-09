@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="pont">
+ <div style = "padding: 100px 100px 5px 100px;">  
+ <h2><a href="{%url 'main'%}">WORD-COUNT</a></h2>
+</div>
+ <h1><a href="{%url 'about'%}">ABOUT</a></h1>
+<div class='area'>
+<form action="{%url 'result'%}">
+    <textarea cols="70" rows="20" name="fulltext"></textarea>
+ <br>
+ <input type="submit" value="count!">
+ </form>
+</div>
+</div>
+</body>
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+    .pont {font-family: 'Black Han Sans', sans-serif;
+    text-align: center;}
+ body{
+     background-color: rgb(181, 137, 209);
+ }
+ h2{
+    font-size: 300%;
+ }
+ h1{
+     font-size: 200%;
+ }
+ textarea{
+    background-color: rgb(212, 189, 235);
+    border: 3px solid rgb(165, 156, 226);
+    border-radius: 10px;
+ }
+</style>

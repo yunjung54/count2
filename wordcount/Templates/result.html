@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+ <div class="pont">
+ <h1>당신이 입력한 텍스트는 {{total}}개로 구성되어 있습니다</h1>
+
+ <a href="{% url 'home'%}" class="again">AGAIN</a>
+ <br>
+
+ <h2>입력한 텍스트 : </h2> 
+ <center>
+ <div class='color'>
+ {{full}}
+</div>
+</center>
+
+ <h2>단어 카운트 : </h2>  
+ <center>
+ <table border="1">
+ {%for word, howmany in dictionary%}
+ <tr>
+ <td colspan="10">{{word}}</td><td colspan="5">{{howmany}}</td>
+ </tr>
+ {%endfor%}
+ </table>
+</center>
+ </div>
+ <br>
+ <br>
+ <br>
+<span class="likebtn-wrapper" data-theme="custom" data-btn_size="50" data-f_size="30" data-icon_size="30" data-icon_l="hrt1" data-icon_l_c="#c63575" data-label_c="#2f2fa3" data-counter_l_c="#2d25b7" data-counter_d_c="#3d26c1" data-bg_c="#ebebff" data-brdr_c="rgba(198,198,198,0.09)" data-identifier="item_1" border-radius:10px;></span>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+  
+</body>
+</html>
+<style>
+ @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+ .pont {font-family: 'Black Han Sans', sans-serif;
+       color: rgb(52, 61, 141);
+       }
+ table{
+     border-color: rgba(76, 109, 218, 0.918);
+     background-color: rgba(254, 254, 255, 0.918);
+ }
+ body{
+    background-color: rgba(125, 150, 235, 0.918);
+    text-align: center;
+ }
+.color{
+    background-color:rgb(217, 219, 255);
+    width: 30%;
+    border-radius: 10px;
+}
+.again{
+    font-size: 170%;
+}
+</style>
+
